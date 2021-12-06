@@ -1,0 +1,50 @@
+- Comando de lista de diretórios : dir
+listagem das pastas
+
+-Comando para ir a uma pasta específica do sitema operacional: cd /
+comando permite navegar entre as pastas
+comando cd.. retrocassa a pasta, volta um passo.
+
+-Comando para limpar a tela(terminal windowns): cls
+
+-Comando para criar uma pasta: mkdir
+
+-Comando 'echo' ele simplesmente 'printa' de volta no terminal uma frase ou texto que você passa. 
+echo 'escreco a frase passada' > (uso esse simbolo que é um redirecionador de fluxo) ele vai pegar a saida dessa função 'echo' e jogar em um arquivo.
+echo hello > hello.txt ( sistema operacional vai checar se na pasta ja existe um arquivo chamado 'hello.txt', caso esse arquivo não exista ele vai criar.
+
+-Comando para deletar um arquivo: del
+-Comando para deletar um repositório: rmdir 'nome pasta' /S /Q (utiliza essas duas flags pra simplificar)
+
+
+-Iniciar o repositíro do GIT, comando é :  -git init ( dentro do diretório/pasta estamos criando um repositório)
+-É necessário atribuir um autor para quando se der o comando commit o Git saber quem foi o responsável pelas alterações :
+-para fazer isso é necessário passar um user.email e um user.name
+os comandos são: 
+git config --global user.email "brunaribeiro.ufv@gmail.com"
+git config --global user.name Bruna
+
+-Comando para modificar/atualizar :
+git config --global --unset user.email
+git config --global --unset user.name
+
+-Para adicionar um arquivo o comando certo é: git add *
+-Para comitar o comando é: git commit -m "escreve o texto"
+
+
+CONCEITOS DE Tracked e Untracked:
+Tracked são considerados os arquivos de fato rastreáveis pelo git. Ele pode se subdividir em 3 estágios diferentes: Unmodified, Modifiend,Staged.
+Untracked são os arquivos que o git ainda não possui conhecimento da existencia.
+Unmodified é o arquivo que ainda não foi modificado.
+Modified é o arquivo que sofreu modificação.
+Staged são os arquivos que estão se preparando para fazer parte de um outro tipo de agrupamento.
+
+O comando git add, pega um arquivo que estava Untracked( arquivo que acabou de ser criado e o git ainda não possui conhecimento deste arquivo), o comando git add move o arquivo direto para a área de Staged.
+
+Staged a partir daqui eu dou o commit( envelopo todas as modificações, escrevo uma mensagem pro commit essa mensagem carrega autor,data), o commit que retorna os arquivos para Unmodified para começar o ciclo novamente.
+
+-Comando git status ajuda a monitorar os status dos arquivos.
+
+-Comando para adicionar um repositório remoto criad no github ao repositorío local da maquina: git remote add origin
+-Comando listar a lista de repositórios remotos que tenho cadastrado: git remote -v
+-Comando para empurrar o repositório local ao repositorio remoto: git push origin master
